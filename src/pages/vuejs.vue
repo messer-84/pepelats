@@ -1,9 +1,16 @@
 <template>
- <router-view></router-view>
+	<div>
+		<p>
+			vuejs
+		</p>
+		
+	</div>
 </template>
 
 <script>
+export default {
 
+}
 </script>
 
 <style>
