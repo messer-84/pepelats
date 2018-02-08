@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<top-menu v-show="currentRouter != '/'"></top-menu>
+		<top-menu v-show="currentRoute !== '/'"></top-menu>
 		<router-view></router-view>
 	</div>
 </template>
@@ -12,7 +12,7 @@
   export default {
     data(){
       return {
-        currentRouter: router.currentRoute.path
+        currentRoute: router.currentRoute.path
       }
     },
     components: {
@@ -20,7 +20,7 @@
     },
     watch: {
       '$route' (to, from) {
-        this.currentRouter = to.path
+        this.currentRoute = to.path
       }
     }
   }
